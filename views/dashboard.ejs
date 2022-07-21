@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('template/head')%>
+<body>
+    <%- include('template/navbar')%>
+    <div class="container">
+        <div class="lottery__box">
+            <div class="lottery__manual">
+                <form action="/add" method="post">
+                    <div>獎品名稱：<input type="text" name="name"></div>
+                    <div>獎品描述：<textarea cols="30" rows="10" name="content"></textarea></div>
+                    <div>設定機率：<input type="text" name="rate"></div>
+                    <div>圖片網址：<input type="text" name="url"></div>    
+                    <button type="submit">新增</button>
+                    <input type="text" style="display:none" value="<%= totalRate %>" name="total">
+                </form>
+                <%= errorMessage %>
+                <div>所有品項的機率：<%= totalRate %> %</div>
+            </div>
+        </div>
+        <div class="lottery__box">
+            <div class="lottery__manual">
+                <% awards.forEach((award) => { %>
+                        <div>獎品名稱：<%= award.name %></div>
+                        <div>獎品描述：<%= award.content %></div>
+                        <div><img src="<%= award.url %>" alt="" width="300px" height="200px"></div>
+                        <div>機率：<%= award.rate %></div>
+                        <div>
+                            <a href="/update/<%= award.id %>">編輯</a>
+                            <a href="/delete/<%= award.id %>">刪除</a>
+                        </div>
+                        <hr>
+                <% }); %>
+            </div>
+        </div>
+    <footer></footer>
+</body>
+</html>

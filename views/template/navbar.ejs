@@ -1,0 +1,15 @@
+<nav>
+    <a href="/"><div class="nav__logo">特</div></a>
+    <div class="nav__item">
+        <div class="nav__btn"><a href="/">試試手氣</a></div>
+        <div class="nav__btn"><a href="/menu">點餐目錄</a></div>
+        <div class="nav__btn"><a href="/order">訂單查詢</a></div>
+        <div class="nav__btn"><a href="/qfa">常見問題</a></div>
+        <div class="nav__btn"><a href="/dashboard">管理後台</a></div>
+        <% if(username) { %>
+        <div class="nav__btn"><a href="/logout">登出</a></div>
+        <% } else { %>
+        <div class="nav__btn"><a href="/login">登入</a></div>
+        <% } %>
+    </div>
+</nav>

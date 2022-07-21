@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('template/head')%>
+<body>
+    <%- include('template/navbar')%>
+    <div class="container">
+        <div class="lottery__box">
+            <div class="lottery__manual">
+                <%= errorMessage %>
+                <% if(!username) { %>
+                    <h3>請先登入</h3>
+                    <form action="/login" method="post">
+                        <div>
+                            帳號：<input type="text" name="username">
+                        </div>
+                        <div>
+                            密碼：<input type="password" name="password">
+                        </div>
+                        <div><button type="submit">登入</button></div>
+                    </form>
+                <% } else { %>
+                <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+</html>

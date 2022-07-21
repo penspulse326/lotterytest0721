@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('template/head')%>
+<body>
+    <%- include('template/navbar')%>
+    <div class="container">
+        <div class="lottery__box">
+            <div class="lottery__manual">
+                <%= errorMessage %>
+                <form action="/update/<%= award.id %>" method="post">
+                    <div>獎品名稱：<input type="text" name="name" value="<%= award.name %>"></div>
+                    <div>獎品描述：<textarea cols="30" rows="10" name="content"><%= award.content %></textarea></div>
+                    <div>設定機率：<input type="text" name="rate" value="<%= award.rate %>"></div>
+                    <div>圖片網址：<input type="text" name="url" value="<%= award.url %>"></div>    
+                    <button type="submit">更新</button>
+                </form>
+            </div>
+        </div>
+    <footer></footer>
+</body>
+</html>
