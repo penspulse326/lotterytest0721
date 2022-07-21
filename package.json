@@ -163,7 +163,7 @@
   "devDependencies": {},
   "scripts": {
     "db:migrate":"npx sequelize db:migrate",
-    "start": "npm run db:migrate && node app.js",
+    "start": "npm run db:migrate && node orm.js && node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

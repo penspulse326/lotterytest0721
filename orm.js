@@ -7,4 +7,5 @@ User.create({
   password: '0000',
 }).then(() => {
   console.log('Done!');
+  return;
 });
