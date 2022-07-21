@@ -1,5 +1,5 @@
 {
-  "name": "lottery",
+  "name": "lotterytest0721",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -25,5 +25,13 @@
   "devDependencies": {
     "sequelize-cli": "^6.4.1"
   },
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shin9626/lotterttest0721.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Shin9626/lotterttest0721/issues"
+  },
+  "homepage": "https://github.com/Shin9626/lotterttest0721#readme"
 }
